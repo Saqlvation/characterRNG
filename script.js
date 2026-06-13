@@ -25,7 +25,7 @@ const animals = [
   { name: "Panther",  rarity: "epic", weight: 5, color: "#9b59b6" },
 
   // Legendary
-  { name: "Dragon",   rarity: "legendary", weight: 1.5, color: "#f1c40f" },
+  { name: "Shark",   rarity: "legendary", weight: 1.5, color: "#f1c40f" },
   { name: "Griffin",  rarity: "legendary", weight: 1.5, color: "#f1c40f" },
   { name: "Phoenix",  rarity: "legendary", weight: 1.5, color: "#f1c40f" },
 
