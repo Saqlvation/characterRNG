@@ -38,3 +38,24 @@ const animals = [
   { name: "Cat", rarity: "secret", weight: 0.02, color: "#ffffff" },
   { name: "Dragon",     rarity: "secret", weight: 0.02, color: "#ffd700" },
 ];
+
+const totalWeight = animals.reduce((sum,animal) => sum + animal.weight, 0);
+const rollBtn = document.getElementById("playBtn");
+const animalArea = document.getElementById("animalFound");
+const animalText = document.getElementById("animalText");
+rollBtn.addEventListener("click", function() {
+  let roll = Math.random() * totalWeight;
+  let chosenAnimal;
+
+  for(const animal of animals) {
+    roll -= animal.weight;
+    if(roll<=0){
+      chosenAnimal=animal;
+      break;
+    }
+  }
+  animalText.textContent = chosenAnimal.name;
+  animalArea.style.display = "block";
+
+  });
+
