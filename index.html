@@ -13,7 +13,8 @@
             text-align: center;
             font-family:Verdana, Geneva, Tahoma, sans-serif;
             margin-top: 40px;
-        }
+            background-color:#65a82d
+            }
 
         #playBtn{
             padding: 20px 50px;
@@ -34,6 +35,16 @@
             height: 400px;
             border: 3px solid;
         }
+/* we place the button on the top left */
+        #changeScenario{
+            position: fixed;
+            top:20px;
+            left: 20px;
+            padding: 15px 40px;
+            font-size: 15px;
+
+
+        }
     </style>
 </head>
 <body>
@@ -47,7 +58,7 @@
 
 
 <div id = "characterFound" style="display:none">
-    <h2 id="characterText"> placeholder </h1>
+    <h2 id="characterText"> placeholder </h2>
     <h2 id="characterRarity">placehlder</h2>
     <p id="characterDescription"></p>
     <img id="characterImage" src="" alt="image">
