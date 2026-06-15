@@ -12,6 +12,9 @@ const characterDescription = document.getElementById("characterDescription")
 const characterImage = document.getElementById("characterImage");
 const changeScenario = document.getElementById("changeScenario");
 const textRoll = document.getElementById("textRolls");
+
+
+let rollHistory = []; // array to keep track of all our rolls
 rollBtn.addEventListener("click", function() {
   
   let roll = Math.random() * totalWeight;
@@ -25,6 +28,7 @@ rollBtn.addEventListener("click", function() {
       break;
     }
   }
+  // we set all texts and colors to the HTML objects
   characterText.textContent = chosenCharacter.name;
   characterRarity.textContent = chosenCharacter.rarity;
   characterRarity.style.color = chosenCharacter.color
@@ -32,7 +36,18 @@ rollBtn.addEventListener("click", function() {
   characterDescription.textContent = chosenCharacter.description;
   characterImage.src = chosenCharacter.image;
   characterArea.style.display = "block";
-  
+
+  // start of array handling
+  // adds all rolls to the front od the array so to the 0 index
+  rollHistory.unshift(chosenCharacter.name + " " + chosenCharacter.rarity)
+
+  // we make sure to check if the array gets too big(since it would get out of the page)
+  if(rollHistory.length > 10){
+    rollHistory.pop(); // pop deletes the last index contents
+  }
+
+  // we display everything in the latest rolls
+  textRoll.innerHTML = rollHistory.join("<br>");
 
 
   });
