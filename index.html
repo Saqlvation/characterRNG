@@ -41,7 +41,7 @@
         #changeScenario{
             position: fixed;
             top:20px;
-            left: 20px;
+            left: 35px;
             padding: 15px 40px;
             font-size: 15px;
             cursor: pointer;
@@ -55,8 +55,20 @@
             position:fixed;
             top:80px;
             left: 20px;
-            border-radius: 6px;
+            border-radius: 4px;
             font-size: small;
+            border: 1px solid;
+
+        } 
+        /* FIXES FOR MOBILE */
+        @media (max-width: 600px){
+            #latestRolls {
+                position:static;
+                width: 90%;
+                margin: 20px auto;
+                top: auto;
+                left: auto;
+            }
         }
     </style>
 </head>
