@@ -2,7 +2,8 @@
 let currentScenario = 0;
 let currentCharacters = scenarios[currentScenario].currentCharacters;
 let totalWeight = currentCharacters.reduce((sum, item) => sum + item.weight, 0);
-
+// change background
+document.body.style.backgroundColor = scenarios[currentScenario].background;
 // getting all the elements
 const rollBtn = document.getElementById("playBtn");
 const characterArea = document.getElementById("characterFound");
@@ -36,6 +37,7 @@ rollBtn.addEventListener("click", function() {
   characterDescription.textContent = chosenCharacter.description;
   characterImage.src = chosenCharacter.image;
   characterArea.style.display = "block";
+  
 
   // start of array handling
   // adds all rolls to the front od the array so to the 0 index
@@ -57,6 +59,8 @@ changeScenario.addEventListener("click", function() {
   currentCharacters = scenarios[currentScenario].currentCharacters;
   totalWeight = currentCharacters.reduce((sum, item) => sum + item.weight, 0);
   changeScenario.textContent = scenarios[currentScenario].name;
-  characterArea.style.display = "none";
+  characterArea.style.display = "none"; 
+  // change background
+  document.body.style.backgroundColor = scenarios[currentScenario].background;
 });
 
