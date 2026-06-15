@@ -11,9 +11,12 @@ const characterRarity = document.getElementById("characterRarity");
 const characterDescription = document.getElementById("characterDescription")
 const characterImage = document.getElementById("characterImage");
 const changeScenario = document.getElementById("changeScenario");
+const textRoll = document.getElementById("textRolls");
 rollBtn.addEventListener("click", function() {
+  
   let roll = Math.random() * totalWeight;
   let chosenCharacter;
+  
 
   for(const character of currentCharacters) {
     roll -= character.weight;
@@ -29,6 +32,8 @@ rollBtn.addEventListener("click", function() {
   characterDescription.textContent = chosenCharacter.description;
   characterImage.src = chosenCharacter.image;
   characterArea.style.display = "block";
+  
+
 
   });
 

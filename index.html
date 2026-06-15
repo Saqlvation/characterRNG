@@ -24,6 +24,8 @@
 
         }
 
+
+
         #playBtn:hover{
             padding: 18px 45px; /* when hover it gets smaller */
             background-color: aqua;
@@ -42,8 +44,18 @@
             left: 20px;
             padding: 15px 40px;
             font-size: 15px;
+            cursor: pointer;
+        }
+        #changeScenario:hover {
+            padding: 13px 39px; /* when hover it gets smaller */
+            background-color: aqua;
+        }
 
-
+        #latestRolls {
+            position:fixed;
+            top:80px;
+            left: 20px;
+            border-radius: 6px;
         }
     </style>
 </head>
@@ -66,6 +78,12 @@
 <div id="differentScenario" style="display:none">
 
 
+
+</div>
+
+<div id="latestRolls">
+<p>Here are your latest rolls:</p>
+<p id="textRolls"></p>
 
 </div>
 
