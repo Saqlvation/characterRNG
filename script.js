@@ -16,7 +16,10 @@ const textRoll = document.getElementById("textRolls");
 
 
 let rollHistory = []; // array to keep track of all our rolls
+
+
 rollBtn.addEventListener("click", function() {
+  // we find out what the result is but we wait before showing ir 
   
   let roll = Math.random() * totalWeight;
   let chosenCharacter;
@@ -29,14 +32,30 @@ rollBtn.addEventListener("click", function() {
       break;
     }
   }
-  // we set all texts and colors to the HTML objects
+
+  rollBtn.disabled = true; // makes it so it cant be spam clicked
+  characterArea.style.display = "block"; // we show the panel
+
+// start of the function that flashes you all the characters to build up some suspense 
+  let spinWheel = setInterval(function() {
+      const randomCharacter = currentCharacters[Math.floor(Math.random()*currentCharacters.length)];
+      characterText.textContent =randomCharacter.name;
+      characterRarity.textContent = randomCharacter.rarity;
+      characterRarity.style.color = randomCharacter.color;
+      characterImage.src = randomCharacter.image;
+
+  },50 )
+
+  // after 1 sec we show the result
+  setTimeout(function() {
+    clearInterval(spinWheel);
+
+      // we set all texts and colors to the HTML objects
   characterText.textContent = chosenCharacter.name;
   characterRarity.textContent = chosenCharacter.rarity;
   characterRarity.style.color = chosenCharacter.color
-
   characterDescription.textContent = chosenCharacter.description;
   characterImage.src = chosenCharacter.image;
-  characterArea.style.display = "block";
   
 
   // start of array handling
@@ -51,8 +70,10 @@ rollBtn.addEventListener("click", function() {
   // we display everything in the latest rolls
   textRoll.innerHTML = rollHistory.join("<br>");
 
+  rollBtn.disabled = false; // we set it to false so we can allow the user to click rooll again
+  }, 1000); // 1 sec
+  })
 
-  });
 
 changeScenario.addEventListener("click", function() {
   currentScenario = (currentScenario + 1) % scenarios.length;
