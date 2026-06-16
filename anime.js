@@ -91,7 +91,7 @@ const anime = [
     rarity: "rare",
     weight: 12,
     color: "#3498db",
-    description: "a loyal warrior that would do anything to protect his loved ones",
+    description: "a loyal warrior that would do anything to protect her loved ones",
     image: "pictures/Mikasa.jpg"
   },
 
