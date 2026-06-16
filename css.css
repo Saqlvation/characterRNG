@@ -56,9 +56,10 @@
         #playBtn:disabled{
             cursor: not-allowed; /* this displays the not allowed sign once you hover a disabled button */
 
-            
 
         }
+
+
         /* FIXES FOR MOBILE */
         @media (max-width: 600px){
             #latestRolls {
