@@ -5,7 +5,7 @@ a simple RNG style game where you can roll for a character(animals and anime cha
 ![example1](assets/example1.gif)
 ![example2](assets/example2.png)
 
-### how do i try it?
+### how to run it
 You can download everything thru here and open the index.html or try it online:
 [TRY HERE](https://character-rng.vercel.app/)
 
@@ -57,7 +57,7 @@ switching scenarios just changes which array gets used and updates the total wei
 
 - The audio was simply declared as a const and played once the spinning 3 second section began
 
-### What have i learned??
+### Things i learned while making this project
 - how to create a RNG game by using weights instead of a bunch of math randoms
 
 - how to separate data from the logic part(multiple js files)
