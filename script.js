@@ -45,6 +45,7 @@ rollBtn.addEventListener("click", function() {
       characterRarity.textContent = randomCharacter.rarity;
       characterRarity.style.color = randomCharacter.color;
       characterImage.src = randomCharacter.image;
+      characterDescription.textContent = "" // we hide the last characters description
       rollSound.play(); // plays the spinning audio
 
   },50 )
