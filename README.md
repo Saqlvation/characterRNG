@@ -6,7 +6,7 @@ a simple RNG style game where you can roll for a character(animals and anime cha
 ![example2](assets/example2.png)
 
 ### how do i try it?
-You can download everything thru here and openm the index.html or try it online:
+You can download everything thru here and open the index.html or try it online:
 [TRY HERE](https://character-rng.vercel.app/)
 
 
