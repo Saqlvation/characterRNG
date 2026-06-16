@@ -13,6 +13,8 @@ const characterDescription = document.getElementById("characterDescription")
 const characterImage = document.getElementById("characterImage");
 const changeScenario = document.getElementById("changeScenario");
 const textRoll = document.getElementById("textRolls");
+// sound of when u roll
+const rollSound = new Audio("sounds/rollSound.mp3");
 
 
 let rollHistory = []; // array to keep track of all our rolls
@@ -43,6 +45,7 @@ rollBtn.addEventListener("click", function() {
       characterRarity.textContent = randomCharacter.rarity;
       characterRarity.style.color = randomCharacter.color;
       characterImage.src = randomCharacter.image;
+      rollSound.play(); // plays the spinning audio
 
   },50 )
 
@@ -71,7 +74,7 @@ rollBtn.addEventListener("click", function() {
   textRoll.innerHTML = rollHistory.join("<br>");
 
   rollBtn.disabled = false; // we set it to false so we can allow the user to click rooll again
-  }, 1000); // 1 sec
+  }, 3000); // 3 sec to match the audio time
   })
 
 
