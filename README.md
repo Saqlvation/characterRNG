@@ -1,8 +1,9 @@
 # Character RNG
-one of my biggest projects to date (16/06/2026)
+one of my biggest projects to date (16/06/2026) !
+
 a simple RNG style game where you can roll for a character(animals and anime charachter) and find out it's rarity ecc.. made entiretly in html css js with a system from common to mythic and secret rarity, based off popular RNG games
 Spin your favourite animal or anime character! 
-
+![example1](assets/example1.gif)
 ### how do i try it?
 You can download everything thru here and openm the index.html or try it online:
 [TRY HERE](https://character-rng.vercel.app/)
